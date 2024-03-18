@@ -15,6 +15,10 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+          appBarTheme: AppBarTheme(
+        color: Colors.grey.withOpacity(0.6),
+      )),
       getPages: getPages,
       home: const AuthPage(),
     );
