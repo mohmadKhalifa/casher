@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/controller/signin_controller.dart';
+import 'package:flutter_application_1/core/class/link_app.dart';
+import 'package:get/get.dart';
 import '../core/widget/custom_text_button.dart';
 import '../core/widget/custom_text_field.dart';
 
@@ -7,8 +10,8 @@ class AuthPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SignInContollrtImp controller = Get.put(SignInContollrtImp());
     return Scaffold(
-      //
       body: Center(
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -20,14 +23,18 @@ class AuthPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const CustomTextField(
+              CustomTextField(
                 hintText: "username",
+                textController: controller.name,
               ),
-              const CustomTextField(
+              CustomTextField(
+                textController: controller.password,
                 hintText: "password",
               ),
               CustomTextButton(
-                onPressede: () {},
+                onPressede: () {
+                  controller.signIn();
+                },
                 text: "Login",
               )
             ],

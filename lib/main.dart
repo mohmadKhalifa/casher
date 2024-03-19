@@ -3,8 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/core/class/route.dart';
 import 'package:flutter_application_1/view/auth_page.dart';
 import 'package:get/get_navigation/get_navigation.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
+late SharedPreferences sharedPreferences;
 void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  sharedPreferences = await SharedPreferences.getInstance();
   runApp(const MyApp());
 }
 
