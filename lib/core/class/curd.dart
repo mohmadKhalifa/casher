@@ -9,7 +9,9 @@ class Curd {
       if (request.statusCode == 200) {
         return jsonDecode(request.body);
       } else {
-        print("Error_____________${request.statusCode}");
+        if (kDebugMode) {
+          print("Error_____________${request.statusCode}");
+        }
       }
     } catch (e) {
       if (kDebugMode) {

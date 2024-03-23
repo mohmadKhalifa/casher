@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controller/signin_controller.dart';
-import 'package:flutter_application_1/core/class/link_app.dart';
 import 'package:get/get.dart';
 import '../core/widget/custom_text_button.dart';
 import '../core/widget/custom_text_field.dart';

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/core/class/app_route.dart';
 import 'package:flutter_application_1/core/class/curd.dart';
 import 'package:flutter_application_1/core/class/status_request.dart';
 import 'package:flutter_application_1/core/data/data.dart';
-import 'package:flutter_application_1/main.dart';
 import 'package:get/get.dart';
 
 abstract class SigninController extends GetxController {
@@ -20,7 +20,7 @@ class SignInContollrtImp extends SigninController {
     update();
     var request = await cashData.signIn(name.text, password.text);
     if (request['status'] == 'success') {
-      sharedPreferences.setString("name", request['data']['users_name']);
+      Get.toNamed(AppRoute.homePage);
       statusRequest = StatusRequest.success;
     } else {
       statusRequest = StatusRequest.failure;
