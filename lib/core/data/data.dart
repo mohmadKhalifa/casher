@@ -10,4 +10,10 @@ class CashData {
         .postData(AppLink.signin, {"name": name, "password": password});
     return request;
   }
+
+  getCategories(String userId) async {
+    var request =
+        await curd.postData(AppLink.viewCategories, {"userId": userId});
+    return request;
+  }
 }

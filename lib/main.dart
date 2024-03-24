@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/core/class/app_them.dart';
 import 'package:flutter_application_1/core/class/route.dart';
 import 'package:flutter_application_1/view/auth_page.dart';
 import 'package:get/get_navigation/get_navigation.dart';
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
           appBarTheme: AppBarTheme(
-        color: Colors.grey.withOpacity(0.6),
+        color: AppTheem.secoundColor,
       )),
       getPages: getPages,
       home: const AuthPage(),

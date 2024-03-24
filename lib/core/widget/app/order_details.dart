@@ -11,6 +11,9 @@ class OrderDetails extends StatelessWidget {
         color: Colors.white,
       ),
       margin: const EdgeInsets.all(10),
+      child: Column(
+        children: const <Widget>[],
+      ),
     );
   }
 }
