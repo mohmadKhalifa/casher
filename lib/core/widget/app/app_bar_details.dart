@@ -14,7 +14,7 @@ class AppBarDetails extends StatelessWidget {
       height: MediaQuery.of(context).size.height / 7,
       decoration: BoxDecoration(
           color: AppTheem.secoundColor,
-          borderRadius: BorderRadius.circular(20)),
+          borderRadius: BorderRadius.circular(10)),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [

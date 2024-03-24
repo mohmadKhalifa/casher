@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/controller/home_page_controller.dart';
+import 'package:flutter_application_1/core/class/app_them.dart';
 import 'package:get/get.dart';
 import 'app_bar_details.dart';
 
@@ -11,7 +12,7 @@ class Categories extends StatelessWidget {
     var controller = Get.find<HomePageControllerImp>();
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(10),
         color: Colors.white,
       ),
       margin: const EdgeInsets.all(10),
@@ -19,7 +20,15 @@ class Categories extends StatelessWidget {
       child: Column(
         children: [
           const AppBarDetails(),
-          Text(controller.categoriesModel[2].categoriesName!)
+          Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10),
+              color: AppTheem.test,
+            ),
+            margin: const EdgeInsets.symmetric(vertical: 10),
+            height: MediaQuery.of(context).size.height / 1.5,
+            width: MediaQuery.of(context).size.width,
+          )
         ],
       ),
     );
